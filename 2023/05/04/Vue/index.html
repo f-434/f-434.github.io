@@ -16,14 +16,16 @@
   <meta name="author" content="F434">
   <meta name="keywords" content="f434">
   
-    <meta property="og:type" content="article">
+    <meta name="description" content="1. 初识Vue 创建Vue实例 , 且要传入一个配置对象  root容器里的代码依然符合html代码规范 , 只不过混入了一些特殊的Vue语法  root容器里的代码被称为  Vue模板   注意：  Vue实例和容器是一一对应的: 真实开发环境中只有一个Vue实例 , 且配合组件一起使用 中的XXXX要写js表达式 , 且XXXX会自动读取到data中的所有属性 一旦data中的数据发生改变">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Vue">
 <meta property="og:url" content="http://example.com/2023/05/04/Vue/index.html">
 <meta property="og:site_name" content="四百三十四点七五的小窝">
+<meta property="og:description" content="1. 初识Vue 创建Vue实例 , 且要传入一个配置对象  root容器里的代码依然符合html代码规范 , 只不过混入了一些特殊的Vue语法  root容器里的代码被称为  Vue模板   注意：  Vue实例和容器是一一对应的: 真实开发环境中只有一个Vue实例 , 且配合组件一起使用 中的XXXX要写js表达式 , 且XXXX会自动读取到data中的所有属性 一旦data中的数据发生改变">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/blog_img/vue-3.png">
 <meta property="article:published_time" content="2023-05-04T10:29:01.000Z">
-<meta property="article:modified_time" content="2023-05-04T11:16:56.925Z">
+<meta property="article:modified_time" content="2023-07-06T13:10:21.370Z">
 <meta property="article:author" content="F434">
 <meta property="article:tag" content="框架">
 <meta name="twitter:card" content="summary_large_image">
@@ -254,7 +256,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          3k 字
         
       </span>
     
@@ -265,7 +267,7 @@
         
         
         
-          1 分钟
+          26 分钟
         
       </span>
     
@@ -316,7 +318,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2023年5月4日 晚上
+                    本文最后更新于：2023年7月6日 晚上
                   
                 
               </p>
@@ -324,7 +326,125 @@
             
               <div class="markdown-body">
                 
-                
+                <h2 id="1-初识Vue"><a href="#1-初识Vue" class="headerlink" title="1. 初识Vue"></a>1. 初识Vue</h2><ul>
+<li><p>创建Vue实例 , 且要传入一个配置对象</p>
+</li>
+<li><p>root容器里的代码依然符合html代码规范 , 只不过混入了一些特殊的Vue语法</p>
+</li>
+<li><p>root容器里的代码被称为  Vue模板 </p>
+</li>
+<li><p>注意：</p>
+<ul>
+<li>Vue实例和容器是一一对应的:</li>
+<li>真实开发环境中只有一个Vue实例 , 且配合组件一起使用</li>
+<li>中的XXXX要写js表达式 , 且XXXX会自动读取到data中的所有属性</li>
+<li>一旦data中的数据发生改变 , 那么模板中用到该数据的地方也会自动更新</li>
+</ul>
+</li>
+<li><p>&#96;&#96;&#96;html</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>初识Vue</title>
+
+<pre><code class="hljs">&lt;!-- 引入Vue --&gt;
+&lt;script src=&quot;../js/vue.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+</code></pre>
+</head>
+
+<body>
+
+<pre><code class="hljs">&lt;!-- 盒子容器--&gt;
+&lt;!-- 插值语法 --&gt;
+&lt;div id=&quot;root&quot;&gt;
+    &lt;h1&gt;hello ,&#123;&#123;name&#125;&#125;,来自&#123;&#123;address&#125;&#125; !!!&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+    Vue.config.productionTip = false;
+
+    // 创建Vue实例
+    new Vue(&#123;
+        // el用于指定当前Vue实例为那个容器服务 , 值通常为css选择器
+        el: &quot;#root&quot;,
+        // data用于存储数据 , 数据供el所指定的容器去使用
+        data: &#123;
+            name: &quot;张三&quot;,
+            address: &quot;云南&quot;
+
+        &#125;
+
+    &#125;)
+&lt;/script&gt;
+</code></pre>
+</body>
+
+</html>
+<figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><code class="hljs handlebars"><span class="language-xml"></span><br><span class="language-xml"></span><br><span class="language-xml"></span><br><span class="language-xml">## 2. 模板语法</span><br><span class="language-xml"></span><br><span class="language-xml">- 模板语法两大类</span><br><span class="language-xml"></span><br><span class="language-xml">  - 插值语法</span><br><span class="language-xml">    - 功能： 用于解析标签体内</span><br><span class="language-xml">    - 写法： </span><span class="hljs-template-variable">&#123;&#123;<span class="hljs-name">XXXX</span>&#125;&#125;</span><span class="language-xml"> XXXX为js表达式，且可以直接读取到data中的所有属性</span><br><span class="language-xml">  - 指令语法：</span><br><span class="language-xml">    - 功能： 用于解析标签（包括标签属性 ， 标签体内容 ， 绑定事件....）</span><br><span class="language-xml">    - 举例： v-bind:href=&quot;xxx&quot; &lt;==等价==&gt; :href=&quot;xxx&quot; ， xxx同样为js表达式</span><br><span class="language-xml"></span><br><span class="language-xml">- ```html</span><br><span class="language-xml">  <span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span></span><br><span class="language-xml">  <span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span></span><br><span class="language-xml">  </span><br><span class="language-xml">  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;X-UA-Compatible&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>模板语法<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;../js/vue.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br><span class="language-xml">  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span></span><br><span class="language-xml">  </span><br><span class="language-xml">  </span><br><span class="language-xml">  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-comment">&lt;!-- 容器 --&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;root&quot;</span>&gt;</span></span><br><span class="language-xml">          <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>插值语法<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span><br><span class="language-xml">          <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span></span><span class="hljs-template-variable">&#123;&#123;<span class="hljs-name">name</span>&#125;&#125;</span><span class="language-xml"> , 这是插值语法<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span></span><br><span class="language-xml">          <span class="hljs-tag">&lt;<span class="hljs-name">hr</span>&gt;</span></span><br><span class="language-xml">          <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>指令语法<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span><br><span class="language-xml">          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">v-bind:href</span>=<span class="hljs-string">&quot;url&quot;</span>&gt;</span>看一看<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span><br><span class="language-xml">          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">:href</span>=<span class="hljs-string">&quot;url&quot;</span>&gt;</span>看一看<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml">  </span><br><span class="language-xml">  </span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="language-javascript"><span class="language-xml">          <span class="hljs-keyword">new</span> <span class="hljs-title class_">Vue</span>(&#123;</span></span><br><span class="language-javascript"><span class="language-xml">              <span class="hljs-attr">el</span>: <span class="hljs-string">&#x27;#root&#x27;</span>,</span></span><br><span class="language-javascript"><span class="language-xml">              <span class="hljs-attr">data</span>: &#123;</span></span><br><span class="language-javascript"><span class="language-xml">                  <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;张三&quot;</span>,</span></span><br><span class="language-javascript"><span class="language-xml">                  <span class="hljs-attr">url</span>: <span class="hljs-string">&quot;http://www.f434.top&quot;</span></span></span><br><span class="language-javascript"><span class="language-xml">              &#125;</span></span><br><span class="language-javascript"><span class="language-xml">  </span></span><br><span class="language-javascript"><span class="language-xml">          &#125;)</span></span><br><span class="language-javascript"><span class="language-xml">      </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br><span class="language-xml">  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></span><br><span class="language-xml">  </span><br><span class="language-xml">  <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="3-数据绑定"><a href="#3-数据绑定" class="headerlink" title="3. 数据绑定"></a>3. 数据绑定</h2><ul>
+<li><p>绑定数据的两种形式：</p>
+<ul>
+<li><p>单向绑定（v-bind）： 数据只能从data流向页面</p>
+</li>
+<li><p>双向数据绑定(v-model:value): 数据不仅能从data流向页面，还可以从页面流向data</p>
+</li>
+</ul>
+</li>
+<li><p>注意：</p>
+<ul>
+<li>双向数据绑定一般是用在表单类元素上</li>
+<li>v-model:value &lt;&#x3D;&#x3D;等价&#x3D;&#x3D;&gt; v-model&#x3D;”” ， 因为v-model默认收集value的值</li>
+</ul>
+</li>
+<li><pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;数据绑定&lt;/title&gt;
+    &lt;script src=&quot;../js/vue.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;div id=&quot;root&quot;&gt;
+        &lt;!-- 双向绑定只能应用于表单类元素 (简化前)--&gt;
+        &lt;!-- 
+        单向数据绑定: &lt;input type=&quot;text&quot; v-bind:value=&quot;name&quot;&gt;&lt;br&gt; 
+        双向数据绑定: &lt;input type=&quot;text&quot; v-model:value=&quot;name&quot;&gt; 
+        --&gt;
+        &lt;!-- 双向绑定只能应用于表单类元素 (简化后)--&gt;
+        单向数据绑定: &lt;input type=&quot;text&quot; :value=&quot;name&quot;&gt;&lt;br&gt; 
+        
+        双向数据绑定: &lt;input type=&quot;text&quot; v-model=&quot;name&quot;&gt;
+
+    &lt;/div&gt;
+
+
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        new Vue(&#123;
+            el: &quot;#root&quot;,
+            data: &#123;
+                name: &#39;zhangsan&#39;
+
+            &#125;
+        &#125;)
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<hr>
+</li>
+</ul>
+
                 
               </div>
             
@@ -367,7 +487,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年5月4日</div>
+          <div>2023年7月6日</div>
         </div>
       
       
