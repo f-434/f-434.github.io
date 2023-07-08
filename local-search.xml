@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>nginx上手</title>
+    <link href="/2023/07/08/nginx%E4%B8%8A%E6%89%8B/"/>
+    <url>/2023/07/08/nginx%E4%B8%8A%E6%89%8B/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="什么是Nginx"><a href="#什么是Nginx" class="headerlink" title="什么是Nginx"></a>什么是Nginx</h1><ul><li>Nginx（engine x）是一个高性能的HTTP和反向代理web服务器，同时也提供了IMAP&#x2F;POP3&#x2F;SMTP服务，Nginx是由伊戈尔-塞索伊夫为俄罗斯访问量第二的站点开发的，第一个公开版本0.1.0发布于2004年10月4日</li><li>特点：<ul><li>占用内存少，并发能力强</li><li>安装简单，配置文件简洁，bug少的服务 </li><li>启动容易，几乎可做到7*24不间断运行，能够在不间断服务的情况下进行软件版本的升级</li></ul></li></ul><h1 id="Nginx的作用"><a href="#Nginx的作用" class="headerlink" title="Nginx的作用"></a>Nginx的作用</h1><blockquote><p>HTTP代理，反向代理：作为web服务器最常用的功能之一，尤其是反向代理</p></blockquote><ul><li><p>正向代理</p><p><img src="https://s2.loli.net/2023/07/08/aBkTtWp63KId8rH.png" alt="image-20230708202321733.png"></p></li><li><p>反向代理</p><p><img src="https://s2.loli.net/2023/07/08/8jbKwTeYZu5Ripa.png" alt="image-20230708200223716.png"></p></li></ul><h1 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h1><ul><li><p>内置策略：</p><ul><li>轮询<ul><li>每个请求会按时间顺序逐一分配到不同的后端服务器</li><li>如果服务器down掉了，会自动剔除该服务器</li><li>缺省配置就是轮询策略</li><li>此策略适合服务器配置相当，无状态且短平快的服务使用</li></ul></li><li>加权轮询（权重）<ul><li>weight参数用于指定轮询几率，weight的默认值为1,；weight的数值与访问比率成正比，比如Tomcat 7.0被访问的几率为其他服务器的两倍</li><li>权重越高分配到需要处理的请求越多</li><li>此策略可以与least_conn和ip_hash结合使用</li><li>此策略比较适合服务器的硬件配置差别比较大的情况</li></ul></li><li>ip_hash<ul><li>指定负载均衡器按照基于客户端IP的分配方式，这个方法确保了相同的客户端的请求一直发送到相同的服务器，以保证session会话。这样每个访客都固定访问一个后端服务器，可以解决session不能跨服务器的问题</li><li>ip_hash不能与backup同时使用</li><li>此策略适合有状态服务，比如session</li><li>当有服务器需要剔除，必须手动down掉</li></ul></li></ul></li><li><p>动静分离</p><ul><li><p>软件开发中，有些请求需要经过后台处理，有些请求不需要后台处理（css、jpg…..）,不需经过后台处理的文件称为静态文件，让动态网站里的动态网页根据一定规则把不变的资源和经常变的资源分开，动静资源做好拆分后，可根据静态资源的特点将其做缓存操作，提高资源响应速度</p><p><img src="https://s2.loli.net/2023/07/08/aBkTtWp63KId8rH.png" alt="image-20230708202321733.png"></p></li></ul></li></ul><h1 id="Nginx安装"><a href="#Nginx安装" class="headerlink" title="Nginx安装"></a>Nginx安装</h1><ul><li><p>window</p><ul><li><a href="https://nginx.org/en/download.html">nginx: download</a></li></ul></li><li><p>Linux</p><ul><li><a href="https://nginx.org/en/download.html">nginx: download</a></li><li>参考<a href="https://zhuanlan.zhihu.com/p/109257078">Linux安装Nginx详细教程 - 知乎 (zhihu.com)</a></li></ul></li><li><p>常用指令</p><ul><li><pre><code class="shell">./nginx           # 启动./nginx -s stop   # 停止./nginx -s quit   # 安全退出./nginx -s reload # 重新加载配置文件ps aux|grep nginx # 查看nginx进程</code></pre></li></ul></li></ul>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Docker入门</title>
     <link href="/2023/07/02/Docker%E5%85%A5%E9%97%A8/"/>
     <url>/2023/07/02/Docker%E5%85%A5%E9%97%A8/</url>
