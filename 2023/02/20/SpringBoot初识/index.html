@@ -16,12 +16,12 @@
   <meta name="author" content="F434">
   <meta name="keywords" content="f434">
   
-    <meta name="description" content="SpringBoot快速上手 springboot 介绍   springboot是由pivotal团队提供的基于spring的全新框架 , 旨在简化spring应用的初始搭建和开发过程   springboot 是所有基于spring开发项目的起点   尽可能简化应用开发的门槛 , 让应用开发,测试, 部署变得更加简单   SpringBoot特点  遵循约定优于配置 的原则 , 只需要很少的配">
+    <meta name="description" content="SpringBoot快速上手  springboot 介绍   springboot是由pivotal团队提供的基于spring的全新框架 , 旨在简化spring应用的初始搭建和开发过程   springboot 是所有基于spring开发项目的起点   尽可能简化应用开发的门槛 , 让应用开发,测试, 部署变得更加简单    SpringBoot特点  遵循约定优于配置 的原则 , 只需要很">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringBoot快速上手">
 <meta property="og:url" content="http://example.com/2023/02/20/SpringBoot%E5%88%9D%E8%AF%86/index.html">
 <meta property="og:site_name" content="四百三十四点七五的小窝">
-<meta property="og:description" content="SpringBoot快速上手 springboot 介绍   springboot是由pivotal团队提供的基于spring的全新框架 , 旨在简化spring应用的初始搭建和开发过程   springboot 是所有基于spring开发项目的起点   尽可能简化应用开发的门槛 , 让应用开发,测试, 部署变得更加简单   SpringBoot特点  遵循约定优于配置 的原则 , 只需要很少的配">
+<meta property="og:description" content="SpringBoot快速上手  springboot 介绍   springboot是由pivotal团队提供的基于spring的全新框架 , 旨在简化spring应用的初始搭建和开发过程   springboot 是所有基于spring开发项目的起点   尽可能简化应用开发的门槛 , 让应用开发,测试, 部署变得更加简单    SpringBoot特点  遵循约定优于配置 的原则 , 只需要很">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/blog_img/springboot.png">
 <meta property="article:published_time" content="2023-02-20T09:08:03.000Z">
@@ -326,8 +326,8 @@
             
               <div class="markdown-body">
                 
-                <h3 id="SpringBoot快速上手">SpringBoot快速上手</h3>
-<h5 id="springboot-介绍">springboot 介绍</h5>
+                <h3 id="springboot快速上手"><a class="markdownIt-Anchor" href="#springboot快速上手"></a> SpringBoot快速上手</h3>
+<h5 id="springboot-介绍"><a class="markdownIt-Anchor" href="#springboot-介绍"></a> springboot 介绍</h5>
 <ul>
 <li>
 <p>springboot是由pivotal团队提供的基于spring的全新框架 , 旨在简化spring应用的初始搭建和开发过程</p>
@@ -339,7 +339,7 @@
 <p>尽可能简化应用开发的门槛 , 让应用开发,测试, 部署变得更加简单</p>
 </li>
 </ul>
-<h5 id="SpringBoot特点">SpringBoot特点</h5>
+<h5 id="springboot特点"><a class="markdownIt-Anchor" href="#springboot特点"></a> SpringBoot特点</h5>
 <ul>
 <li>遵循约定优于配置 的原则 , 只需要很少的配置或使用默认的配置</li>
 <li>能够使用内嵌的Tomcat jetty服务器 , 不需要部署war文件</li>
@@ -347,7 +347,7 @@
 <li>纯java配置,没有代码生成 , 也不需要xml配置</li>
 <li>提供了生产级的服务监控方案 , 如安全监控 , 应用监控 , 健康检测等</li>
 </ul>
-<h5 id="开发环境热部署">开发环境热部署</h5>
+<h5 id="开发环境热部署"><a class="markdownIt-Anchor" href="#开发环境热部署"></a> 开发环境热部署</h5>
 <ul>
 <li>
 <p>springboot提供了spring-boot-devtools组件,使得无需手动重启springboot应用即可重新编译 , 启动项目 , 从而缩短启动时间</p>
@@ -375,15 +375,15 @@
 </ul>
 </li>
 </ul>
-<h3 id="SpringBoot-Controller">SpringBoot Controller</h3>
-<h5 id="web入门">web入门</h5>
+<h3 id="springboot-controller"><a class="markdownIt-Anchor" href="#springboot-controller"></a> SpringBoot Controller</h3>
+<h5 id="web入门"><a class="markdownIt-Anchor" href="#web入门"></a> web入门</h5>
 <ul>
 <li>springboot将传统的web开发的mvc json tomcat等框架整合 , 提供了spring-boot-starter-web组件,简化了web应用配置</li>
 <li>创建springboot项目勾选spring web选项后 , 会自动将spring-boot-starter-web组件加入到项目当中</li>
 <li>spring-boot-starter-web启动器主要包括web webmvc json tomcat等基础依赖组件,提供web开发场景所需的所有底层依赖</li>
 <li>webmvc为web开发的基础框架 , json为JSON数据解析组件 , tomcat为自带的容器依赖</li>
 </ul>
-<h5 id="控制器">控制器</h5>
+<h5 id="控制器"><a class="markdownIt-Anchor" href="#控制器"></a> 控制器</h5>
 <ul>
 <li>springboot提供@Controller和@RestController两种注解来标识此类负责接收和处理HTTP请求</li>
 <li>如果请求的是页面和数据 , 使用@Controller注解即可, 如果只是请求数据,则可以使用@RestController</li>
@@ -393,7 +393,7 @@
 </ul>
 </li>
 </ul>
-<h5 id="路由映射">路由映射</h5>
+<h5 id="路由映射"><a class="markdownIt-Anchor" href="#路由映射"></a> 路由映射</h5>
 <ul>
 <li>
 <p>@RequestMapping注解主要负责URL的路由映射 , 他可以添加在Controller类或者具体的方法上</p>
@@ -410,7 +410,7 @@
 <li>produces : 响应的媒体类型</li>
 <li>params , headers : 请求的参数及请求头的值</li>
 </ul>
-<h5 id="参数传递">参数传递</h5>
+<h5 id="参数传递"><a class="markdownIt-Anchor" href="#参数传递"></a> 参数传递</h5>
 <ul>
 <li>@RequestParam将请求参数绑定到控制器的方法参数上,接收的参数来自HTTP请求体或请求url的QueryString , 当请求的参数名称与Controller的业务方法参数名称一致时,@RequestParam可以省略</li>
 <li>@PathVaraible: 用来处理动态的URL , URL的值可以作为控制器中处理方法的参数</li>
@@ -418,8 +418,8 @@
 </ul>
 </li>
 </ul>
-<h3 id="SpringBoot-文件上传-拦截器">SpringBoot 文件上传 + 拦截器</h3>
-<h5 id="静态资源访问">静态资源访问</h5>
+<h3 id="springboot-文件上传-拦截器"><a class="markdownIt-Anchor" href="#springboot-文件上传-拦截器"></a> SpringBoot 文件上传 + 拦截器</h3>
+<h5 id="静态资源访问"><a class="markdownIt-Anchor" href="#静态资源访问"></a> 静态资源访问</h5>
 <ul>
 <li>
 <p>idea创建SpringBoot 项目,会默认创建出classpath:/static/目录,静态资源一般放在这个目录下即可</p>
@@ -432,7 +432,7 @@
 <figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-comment"># 定义静态资源的加载位置</span><br><span class="hljs-attr">spring.mvc.static-path-pattern</span>=<span class="hljs-string">/img/**</span><br></code></pre></td></tr></table></figure>
 </li>
 </ul>
-<h5 id="springboot实现文件上传">springboot实现文件上传</h5>
+<h5 id="springboot实现文件上传"><a class="markdownIt-Anchor" href="#springboot实现文件上传"></a> springboot实现文件上传</h5>
 <blockquote>
 <p>实现上传的文件可以被访问需更改静态资源加载位置</p>
 <figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-comment"># 第一个斜线代表的是服务器所在的路径</span><br><span class="hljs-attr">spring.web.resources.static-locations</span>=<span class="hljs-string">/upload/</span><br></code></pre></td></tr></table></figure>
@@ -450,7 +450,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.example.hellworld.controller;<br><br><br><span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.PostMapping;<br><span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RestController;<br><span class="hljs-keyword">import</span> org.springframework.web.multipart.MultipartFile;<br><br><span class="hljs-keyword">import</span> javax.servlet.http.HttpServletRequest;<br><span class="hljs-keyword">import</span> java.io.File;<br><span class="hljs-keyword">import</span> java.io.IOException;<br><br><span class="hljs-meta">@RestController</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">FileController</span> &#123;<br><br>    <span class="hljs-meta">@PostMapping(&quot;/upload&quot;)</span><br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">up</span><span class="hljs-params">(String name , MultipartFile multipartFile , HttpServletRequest request)</span> <span class="hljs-keyword">throws</span> IOException &#123;<br>        System.out.println(name);<br>        <span class="hljs-comment">//获取上传文件的原始名称</span><br>        System.out.println(multipartFile.getOriginalFilename());<br><br>        <span class="hljs-comment">//获取文件类型</span><br>        System.out.println(multipartFile.getContentType());<br><br><br>        <span class="hljs-comment">//动态获取服务器下upload的绝对路径</span><br>        <span class="hljs-type">String</span> <span class="hljs-variable">path</span> <span class="hljs-operator">=</span> request.getServletContext().getRealPath(<span class="hljs-string">&quot;/upload/&quot;</span>);<br>        System.out.println(path);<br>        saveFile(multipartFile , path);<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;上传成功&quot;</span>;<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">saveFile</span><span class="hljs-params">(MultipartFile multipartFile , String path)</span> <span class="hljs-keyword">throws</span> IOException &#123;<br>        <span class="hljs-comment">//判断目录 , 不存在则创建</span><br>        <span class="hljs-type">File</span> <span class="hljs-variable">dir</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">File</span>(path);<br>        <span class="hljs-keyword">if</span> (!dir.exists())&#123;<br>            <span class="hljs-comment">//创建目录</span><br>            dir.mkdir();<br>        &#125;<br><br>        <span class="hljs-type">File</span> <span class="hljs-variable">file</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">File</span>(path + multipartFile.getOriginalFilename());<br>        multipartFile.transferTo(file);<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
 </li>
 </ul>
-<h4 id="拦截器">拦截器</h4>
+<h4 id="拦截器"><a class="markdownIt-Anchor" href="#拦截器"></a> 拦截器</h4>
 <ul>
 <li>
 <p>拦截器在web系统中非常常见 , 对于某些全局统一的操作 , 我们可以把它提取到拦截器中实现</p>
@@ -489,14 +489,14 @@
 </ul>
 </li>
 </ul>
-<h2 id="构建RESTful服务-Swagger">构建RESTful服务 + Swagger</h2>
-<h5 id="RESTful服务介绍">RESTful服务介绍</h5>
+<h2 id="构建restful服务-swagger"><a class="markdownIt-Anchor" href="#构建restful服务-swagger"></a> 构建RESTful服务 + Swagger</h2>
+<h5 id="restful服务介绍"><a class="markdownIt-Anchor" href="#restful服务介绍"></a> RESTful服务介绍</h5>
 <ul>
 <li>RESTful是目前流行的互联网软件服务架构设计风格</li>
 <li>全称是Representational State Transfer，中文意思是表述（编者注：通常译为表征）性状态转移。定义了互联网软件架构的原则</li>
 <li>REST并不是一个标准,更像一组客户端和服务端交互时的架构理念和设计原则,基于这种架构理念和设计原则的Web API更加简洁 ,更有层次</li>
 </ul>
-<h5 id="RESTful特点">RESTful特点</h5>
+<h5 id="restful特点"><a class="markdownIt-Anchor" href="#restful特点"></a> RESTful特点</h5>
 <ul>
 <li>每个URL都代表一个资源</li>
 <li>客户端使用get post put delete 四种表示操作方式的动词对服务资源进行操作:
@@ -511,7 +511,7 @@
 <li>资源的表现形式JSON或者HTML</li>
 <li>客户端与服务端之间的交互在请求之间是无状态的,从客户端到服务端的每个请求都包含必须的信息</li>
 </ul>
-<h5 id="RESTful-API">RESTful API</h5>
+<h5 id="restful-api"><a class="markdownIt-Anchor" href="#restful-api"></a> RESTful API</h5>
 <ul>
 <li>两个关键特性:
 <ul>
@@ -520,7 +520,7 @@
 </ul>
 </li>
 </ul>
-<h5 id="HTTP-Method">HTTP Method</h5>
+<h5 id="http-method"><a class="markdownIt-Anchor" href="#http-method"></a> HTTP Method</h5>
 <ul>
 <li>
 <p>http提供了post get put delete 等操作类型对某个Web资源进行create , read update和delete操作</p>
@@ -577,7 +577,7 @@
 </table>
 </li>
 </ul>
-<h5 id="HTTP状态码">HTTP状态码</h5>
+<h5 id="http状态码"><a class="markdownIt-Anchor" href="#http状态码"></a> HTTP状态码</h5>
 <ul>
 <li>HTTP状态码就是服务向用户返回的状态码和提示信息,客户端的每一次请求,服务器都必须给出回应,回应包括HTTP状态码和数据两部分</li>
 <li>HTTP定义了40个标准状态码,可用于传达客户端请求的结果,状态码分为以下五类
@@ -590,7 +590,7 @@
 </ul>
 </li>
 </ul>
-<h5 id="Spring-Boot-实现RESTful">Spring Boot 实现RESTful</h5>
+<h5 id="spring-boot-实现restful"><a class="markdownIt-Anchor" href="#spring-boot-实现restful"></a> Spring Boot 实现RESTful</h5>
 <ul>
 <li>
 <p>SpringBoot提供的spring-boot-starter-web组件完全支持开发TRESTful API , 提供了与REST操作方式对应的注解</p>
@@ -614,7 +614,7 @@
 <p>在RESTful架构中, 每个网址代表一种资源,所以URL中建议不要包含动词,只包含名词即可,而且所用的名词往往与数据库中的表名对应</p>
 </li>
 </ul>
-<h5 id="Swagger-介绍">Swagger 介绍</h5>
+<h5 id="swagger-介绍"><a class="markdownIt-Anchor" href="#swagger-介绍"></a> Swagger 介绍</h5>
 <ul>
 <li>
 <p>Swagger 是一个规范和完整的框架 , 用于生成描述调用和可视化RESTful风格的Web服务,是非常流行的API表达工具</p>
@@ -641,20 +641,20 @@
 <p>启动项目后浏览器访问<code>http://localhost:8080/swagger-ui.html</code></p>
 </li>
 </ul>
-<h2 id="MyBatisPlus-快速上手">MyBatisPlus 快速上手</h2>
-<h3 id="ORM介绍">ORM介绍</h3>
+<h2 id="mybatisplus-快速上手"><a class="markdownIt-Anchor" href="#mybatisplus-快速上手"></a> MyBatisPlus 快速上手</h2>
+<h3 id="orm介绍"><a class="markdownIt-Anchor" href="#orm介绍"></a> ORM介绍</h3>
 <ul>
 <li>ORM(Object Relational Mapping , 对象关系映射)  ,是为了解决面向对象与关系型数据库存在的互不匹配现象的一种技术</li>
 <li>ORM通过使用描述对象和数据库之间映射的元数据将程序中的对象自动持久化到关系数据库中</li>
 <li>ORM框架的本质是简化编程中操作数据库的编码</li>
 </ul>
-<p><img src="https://img1.imgtp.com/2023/03/30/Iwb9YseN.png" srcset="/img/loading.gif" lazyload alt="ORM对象关系映射"></p>
-<h3 id="MyBatis-Plus-介绍">MyBatis-Plus 介绍</h3>
+<p><img src="https://img1.imgtp.com/2023/03/30/Iwb9YseN.png" srcset="/img/loading.gif" lazyload alt="ORM对象关系映射" /></p>
+<h3 id="mybatis-plus-介绍"><a class="markdownIt-Anchor" href="#mybatis-plus-介绍"></a> MyBatis-Plus 介绍</h3>
 <ul>
 <li>MyBatis能够非常灵活的实现动态SQL , 可以使用XML或注解来配置和映射原生信息,能够轻松的将Java的pojo(Plain Ordinary Java Object , 普通的Java对象)与数据库中的表和字段进行映射关联</li>
 <li>MyBatis-Plus是MyBatis的增强 ,简化了开发</li>
 </ul>
-<h3 id="MyBatis-Plus的使用">MyBatis-Plus的使用</h3>
+<h3 id="mybatis-plus的使用"><a class="markdownIt-Anchor" href="#mybatis-plus的使用"></a> MyBatis-Plus的使用</h3>
 <ul>
 <li>
 <p>添加依赖</p>

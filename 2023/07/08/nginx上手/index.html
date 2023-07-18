@@ -16,12 +16,12 @@
   <meta name="author" content="F434">
   <meta name="keywords" content="f434">
   
-    <meta name="description" content="什么是Nginx  Nginx（engine x）是一个高性能的HTTP和反向代理web服务器，同时也提供了IMAP&#x2F;POP3&#x2F;SMTP服务，Nginx是由伊戈尔-塞索伊夫为俄罗斯访问量第二的站点开发的，第一个公开版本0.1.0发布于2004年10月4日 特点：  占用内存少，并发能力强 安装简单，配置文件简洁，bug少的服务 启动容易，几乎可做到7*24不间断运行，能够在不间断服务的情况下进行软">
+    <meta name="description" content="什么是Nginx  Nginx（engine x）是一个高性能的HTTP和反向代理web服务器，同时也提供了IMAP&#x2F;POP3&#x2F;SMTP服务，Nginx是由伊戈尔-塞索伊夫为俄罗斯访问量第二的站点开发的，第一个公开版本0.1.0发布于2004年10月4日 特点：  占用内存少，并发能力强 安装简单，配置文件简洁，bug少的服务 启动容易，几乎可做到7*24不间断运行，能够在不间断服务的情况下进行">
 <meta property="og:type" content="article">
 <meta property="og:title" content="nginx上手">
 <meta property="og:url" content="http://example.com/2023/07/08/nginx%E4%B8%8A%E6%89%8B/index.html">
 <meta property="og:site_name" content="四百三十四点七五的小窝">
-<meta property="og:description" content="什么是Nginx  Nginx（engine x）是一个高性能的HTTP和反向代理web服务器，同时也提供了IMAP&#x2F;POP3&#x2F;SMTP服务，Nginx是由伊戈尔-塞索伊夫为俄罗斯访问量第二的站点开发的，第一个公开版本0.1.0发布于2004年10月4日 特点：  占用内存少，并发能力强 安装简单，配置文件简洁，bug少的服务 启动容易，几乎可做到7*24不间断运行，能够在不间断服务的情况下进行软">
+<meta property="og:description" content="什么是Nginx  Nginx（engine x）是一个高性能的HTTP和反向代理web服务器，同时也提供了IMAP&#x2F;POP3&#x2F;SMTP服务，Nginx是由伊戈尔-塞索伊夫为俄罗斯访问量第二的站点开发的，第一个公开版本0.1.0发布于2004年10月4日 特点：  占用内存少，并发能力强 安装简单，配置文件简洁，bug少的服务 启动容易，几乎可做到7*24不间断运行，能够在不间断服务的情况下进行">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/blog_img/nginx.png">
 <meta property="article:published_time" content="2023-07-08T11:36:10.000Z">
@@ -326,7 +326,7 @@
             
               <div class="markdown-body">
                 
-                <h1>什么是Nginx</h1>
+                <h1 id="什么是nginx"><a class="markdownIt-Anchor" href="#什么是nginx"></a> 什么是Nginx</h1>
 <ul>
 <li>Nginx（engine x）是一个高性能的HTTP和反向代理web服务器，同时也提供了IMAP/POP3/SMTP服务，Nginx是由伊戈尔-塞索伊夫为俄罗斯访问量第二的站点开发的，第一个公开版本0.1.0发布于2004年10月4日</li>
 <li>特点：
@@ -337,21 +337,21 @@
 </ul>
 </li>
 </ul>
-<h1>Nginx的作用</h1>
+<h1 id="nginx的作用"><a class="markdownIt-Anchor" href="#nginx的作用"></a> Nginx的作用</h1>
 <blockquote>
 <p>HTTP代理，反向代理：作为web服务器最常用的功能之一，尤其是反向代理</p>
 </blockquote>
 <ul>
 <li>
 <p>正向代理</p>
-<p><img src="https://s2.loli.net/2023/07/08/aBkTtWp63KId8rH.png" srcset="/img/loading.gif" lazyload alt="image-20230708202321733.png"></p>
+<p><img src="https://s2.loli.net/2023/07/08/aBkTtWp63KId8rH.png" srcset="/img/loading.gif" lazyload alt="image-20230708202321733.png" /></p>
 </li>
 <li>
 <p>反向代理</p>
-<p><img src="https://s2.loli.net/2023/07/08/8jbKwTeYZu5Ripa.png" srcset="/img/loading.gif" lazyload alt="image-20230708200223716.png"></p>
+<p><img src="https://s2.loli.net/2023/07/08/8jbKwTeYZu5Ripa.png" srcset="/img/loading.gif" lazyload alt="image-20230708200223716.png" /></p>
 </li>
 </ul>
-<h1>负载均衡</h1>
+<h1 id="负载均衡"><a class="markdownIt-Anchor" href="#负载均衡"></a> 负载均衡</h1>
 <ul>
 <li>
 <p>内置策略：</p>
@@ -387,12 +387,12 @@
 <ul>
 <li>
 <p>软件开发中，有些请求需要经过后台处理，有些请求不需要后台处理（css、jpg…）,不需经过后台处理的文件称为静态文件，让动态网站里的动态网页根据一定规则把不变的资源和经常变的资源分开，动静资源做好拆分后，可根据静态资源的特点将其做缓存操作，提高资源响应速度</p>
-<p><img src="https://s2.loli.net/2023/07/08/aBkTtWp63KId8rH.png" srcset="/img/loading.gif" lazyload alt="image-20230708202321733.png"></p>
+<p><img src="https://s2.loli.net/2023/07/08/aBkTtWp63KId8rH.png" srcset="/img/loading.gif" lazyload alt="image-20230708202321733.png" /></p>
 </li>
 </ul>
 </li>
 </ul>
-<h1>Nginx安装</h1>
+<h1 id="nginx安装"><a class="markdownIt-Anchor" href="#nginx安装"></a> Nginx安装</h1>
 <ul>
 <li>
 <p>window</p>
@@ -411,7 +411,7 @@
 <p>常用指令</p>
 <ul>
 <li>
-<pre><code class="language-shell">./nginx           # 启动
+<pre class="highlight"><code class="shell">./nginx           # 启动
 ./nginx -s stop   # 停止
 ./nginx -s quit   # 安全退出
 ./nginx -s reload # 重新加载配置文件
